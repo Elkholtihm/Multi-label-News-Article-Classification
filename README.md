@@ -4,7 +4,6 @@ An AI-powered system for automatic classification of news articles into multiple
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/flask-3.0.0-green.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Overview
 
