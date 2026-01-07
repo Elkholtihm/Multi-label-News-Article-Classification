@@ -1,0 +1,1 @@
+> We divided the tasks because of the time taken for computations, hardware limits, and unstable internet.

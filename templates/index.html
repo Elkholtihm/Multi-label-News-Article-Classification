@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Classification System</title>
+    <link rel="icon" type="image/x-icon"
+          href="{{ url_for('static', filename='icons/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📰 Multi-Label News Classification</h1>
+            <p class="subtitle">AI-Powered News Categorization System</p>
+        </header>
+
+        <div class="controls">
+            <button id="fetchNewsBtn" class="btn btn-primary">
+                <span class="btn-text">Fetch & Classify News</span>
+                <span class="loader" style="display: none;"></span>
+            </button>
+            <div class="filter-section">
+                <label for="categoryFilter">Filter by Categories:</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select-trigger" id="selectTrigger">
+                        <span class="selected-text">Select categories...</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="custom-select-dropdown" id="selectDropdown">
+                        <div class="dropdown-header">
+                            <button class="select-all-btn" id="selectAllBtn">Select All</button>
+                            <button class="clear-all-btn" id="clearAllBtn">Clear All</button>
+                        </div>
+                        <div class="dropdown-options" id="dropdownOptions">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="stats" class="stats" style="display: none;">
+            <div class="stat-item">
+                <span class="stat-label">Total Articles:</span>
+                <span id="totalArticles" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Categories Found:</span>
+                <span id="categoriesFound" class="stat-value">0</span>
+            </div>
+        </div>
+
+        <div id="newsContainer" class="news-grid"></div>
+
+        <div id="error" class="error" style="display: none;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
